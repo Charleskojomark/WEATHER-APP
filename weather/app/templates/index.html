@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="city">
+        <button type="submit">Search</button>
+    </form>
+    <div>
+        <h1>{{ city|capfirst }}</h1>
+        <h3>Country code: {{ data.country_code }}</h3>
+        <h5>Coordinate: {{ data.coordinate }}</h5>
+        <h5>Temperature: {{ data.temp }}</h5>
+        <h5>Pressure: {{ data.pressure }}</h5>
+        <h5>Humidity: {{ data.humidity }}</h5>
+        <h5>Main: {{ data.main }}</h5>
+        <h5>Description: {{ data.description }}</h5>
+        <h5>Icon: {{ data.icon }}</h5>
+    </div>
+</body>
+</html>
